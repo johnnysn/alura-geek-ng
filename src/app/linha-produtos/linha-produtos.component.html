@@ -1,0 +1,16 @@
+<section class="linha-produtos">
+    <div *ngFor="let c of categorias; index as i" class="container-v">
+        <div class="linha-produtos__header">
+            <h3 class="linha-produtos__header__title">{{ c }}</h3>
+            <a href=""><span>Ver tudo</span><i class="linha-produtos__header__arrow"></i></a>
+        </div>
+        <ul class="linha-produtos__itens">
+            <li class="linha-produtos__item" *ngFor="let p of produtos[c]; index as j">
+                <img class="linha-produtos__item__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
+                <h4 class="linha-produtos__item__nome">{{ p.nome }}</h4>
+                <p class="linha-produtos__item__preco">{{ p.preco }}</p>
+                <a href="">Ver produto</a>
+            </li>
+        </ul>
+    </div>
+</section>
