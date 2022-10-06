@@ -8,7 +8,7 @@
             <li class="linha-produtos__item" *ngFor="let p of produtos[c]; index as j">
                 <img class="linha-produtos__item__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
                 <h4 class="linha-produtos__item__nome">{{ p.nome }}</h4>
-                <p class="linha-produtos__item__preco">{{ p.preco }}</p>
+                <p class="linha-produtos__item__preco">{{ p.preco | currency }}</p>
                 <a href="">Ver produto</a>
             </li>
         </ul>
