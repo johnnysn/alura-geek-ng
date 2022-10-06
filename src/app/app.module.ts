@@ -10,6 +10,10 @@ import { LinhaProdutosComponent } from './linha-produtos/linha-produtos.componen
 // Definir locale PT-BR
 import ptBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { FrontComponent } from './front/front.component';
+import { AppRoutingModule } from './app-routing.module';
+import { LoginComponent } from './auth/login/login.component';
+import { SearchbarComponent } from './header/searchbar/searchbar.component';
 registerLocaleData(ptBr);
 
 @NgModule({
@@ -18,10 +22,14 @@ registerLocaleData(ptBr);
     HeaderComponent,
     BannerComponent,
     FooterComponent,
-    LinhaProdutosComponent
+    LinhaProdutosComponent,
+    FrontComponent,
+    LoginComponent,
+    SearchbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
