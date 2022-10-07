@@ -1,20 +1,19 @@
 import { NgModule, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
+// Definir locale PT-BR
+import ptBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(ptBr);
+
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BannerComponent } from './banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
 import { LinhaProdutosComponent } from './linha-produtos/linha-produtos.component';
-
-// Definir locale PT-BR
-import ptBr from '@angular/common/locales/pt';
-import { registerLocaleData } from '@angular/common';
 import { FrontComponent } from './front/front.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
-import { SearchbarComponent } from './header/searchbar/searchbar.component';
-registerLocaleData(ptBr);
 
 @NgModule({
   declarations: [
@@ -24,8 +23,7 @@ registerLocaleData(ptBr);
     FooterComponent,
     LinhaProdutosComponent,
     FrontComponent,
-    LoginComponent,
-    SearchbarComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,

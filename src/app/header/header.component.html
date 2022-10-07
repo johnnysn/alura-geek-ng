@@ -1,13 +1,17 @@
-<header class="header">
-    <div class="container-h">
-        <div class="header__left">
-            <a routerLink="/front"><img src="assets/img/Logo.svg" alt="Alura Geek" class="header__logo"></a>
+<div class="container">
+    <header class="header">
+      <div class="header__left">
+        <a routerLink="/front"><img src="assets/img/Logo.svg" alt="Alura Geek" class="header__logo"></a>
 
-            <app-searchbar></app-searchbar>
+        <div class="searchbar">
+          <input class="searchbar__input" type="text" id="txtSearch" placeholder="O que deseja encontrar?" />
+          <button class="searchbar__button" type="button"><i class="searchbar__button__icon"></i></button>
         </div>
-        
-        <button type="button" class="header__button" routerLink="/login">Login</button>
+      </div>
 
-        <button class="header__button-search" type="button"><i class="header__button-search__icon"></i></button>
-    </div>
-</header>
+      <button type="button" class="header__button" routerLink="/login">Login</button>
+
+      <button class="header__button-search" type="button"><i class="header__button-search__icon"></i></button>
+    </header>
+</div>
+
