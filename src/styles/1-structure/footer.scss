@@ -10,8 +10,14 @@
   justify-content: space-between;
   align-items: flex-start;
   background-color: #EAF2FD;
-  padding: 64px;
+  padding: 16px;
   gap: 115px;
+}
+
+@media (min-width: 720px) {
+  .footer-top {
+    padding: 64px;
+  }
 }
 
 .footer-top__logo {
@@ -49,6 +55,7 @@
   justify-content: center;
   text-align: center;
   gap: 10px;
+  height: 170px;
 }
 
 .footer-down__line {
