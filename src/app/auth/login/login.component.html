@@ -1,14 +1,14 @@
 <section class="login">
 
-  <form class="login__form">
+  <form class="login__form" [formGroup]="form" (ngSubmit)="onSubmit()">
 
     <h3 class="login__form__title">Iniciar Sessão</h3>
 
-    <input type="text" class="form__input login__form__input" placeholder="Escreva seu email">
+    <input type="text" email class="form__input login__form__input" placeholder="Escreva seu email" formControlName="email">
 
-    <input type="text" class="form__input login__form__input" placeholder="Escreva sua senha">
+    <input type="password" class="form__input login__form__input" placeholder="Escreva sua senha" formControlName="password">
 
-    <button class="form__button login__form__button">Entrar</button>
+    <button class="form__button login__form__button" type="submit">Entrar</button>
 
   </form>
 
