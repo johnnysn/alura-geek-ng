@@ -15,6 +15,7 @@ import { FrontComponent } from './front/front.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { ProdutoHomeComponent } from './produto/produto-home/produto-home.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     FooterComponent,
     LinhaProdutosComponent,
     FrontComponent,
-    LoginComponent
+    LoginComponent,
+    ProdutoHomeComponent
   ],
   imports: [
     BrowserModule,

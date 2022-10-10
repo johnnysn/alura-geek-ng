@@ -4,11 +4,15 @@
 
     <h3 class="login__form__title">Iniciar Sessão</h3>
 
-    <input type="text" email class="form__input login__form__input" placeholder="Escreva seu email" formControlName="email">
+    <input type="text"  class="form__input login__form__input" placeholder="Escreva seu email" formControlName="email"
+           required email
+    >
 
-    <input type="password" class="form__input login__form__input" placeholder="Escreva sua senha" formControlName="password">
+    <input type="password" class="form__input login__form__input" placeholder="Escreva sua senha" formControlName="password"
+           required minlength="6"
+    >
 
-    <button class="form__button login__form__button" type="submit">Entrar</button>
+    <button class="button login__form__button" type="submit" [disabled]="!form.valid" >Entrar</button>
 
   </form>
 

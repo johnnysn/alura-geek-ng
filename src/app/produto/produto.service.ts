@@ -14,8 +14,11 @@ export class ProdutoService {
   constructor() {
   }
 
-  getProdutos(categoria: string): Observable<Produto[]> {
-    return of(this.data.produtos.slice().filter((p: Produto) => p.categoria == categoria));
+  getProdutos(categoria?: string): Observable<Produto[]> {
+    if (categoria)
+      return of(this.data.produtos.slice().filter((p: Produto) => p.categoria == categoria));
+
+    return of(this.data.produtos.slice());
   }
 
   getCategorias(): Observable<string[]> {
