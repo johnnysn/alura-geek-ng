@@ -37,6 +37,22 @@
   display: block;
 }
 
+.header__logout {
+  border: unset;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.header__logout__icon {
+  background-size: contain;
+  background: url("/assets/img/logout.svg") no-repeat;
+  height: 16px;
+  width: 16px;
+}
+
 .searchbar {
   background: #F5F5F5;
   border-color: #F5F5F5;

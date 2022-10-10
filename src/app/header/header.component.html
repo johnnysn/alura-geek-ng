@@ -9,7 +9,8 @@
         </div>
       </div>
 
-      <button type="button" class="header__button" routerLink="/login">Login</button>
+      <button *ngIf="!isAuthenticated()" type="button" class="header__button" routerLink="/login">Login</button>
+      <button *ngIf="isAuthenticated()" type="button" class="header__logout" (click)="logout()"><i class="header__logout__icon"></i> Logout</button>
 
       <button class="header__button-search" type="button"><i class="header__button-search__icon"></i></button>
     </header>

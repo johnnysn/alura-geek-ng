@@ -50,39 +50,9 @@
   gap: 16px;
 }
 
-.linha-produtos__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
-  gap: 8px;
-}
-
-.linha-produtos__item__nome {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-}
-
-.linha-produtos__item__preco {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-}
-
-.linha-produtos__item__img {
-  width: 156px;
-  height: 174px;
-}
-
 @media (min-width: 720px) {
   .linha-produtos {
     padding: 16px 32px;
-  }
-
-  .linha-produtos__item__img {
-    width: 176px;
-    height: 174px;
   }
 }
 
@@ -90,11 +60,4 @@
   .linha-produtos {
     padding: 16px 0;
   }
-}
-
-.linha-produtos__item a {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19px;
-  color: #2A7AE4;
 }

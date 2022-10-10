@@ -6,10 +6,14 @@
       <button class="button" type="button">Adicionar produto</button>
     </div>
     <ul class="linha-produtos__itens">
-      <li class="linha-produtos__item" *ngFor="let p of produtos; index as j">
-        <img class="linha-produtos__item__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
-        <h4 class="linha-produtos__item__nome">{{ p.nome }}</h4>
-        <p class="linha-produtos__item__preco">{{ p.preco | currency }}</p>
+      <li class="item-produto" *ngFor="let p of produtos; index as j">
+        <div style="position: relative">
+          <img class="item-produto__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
+          <i class="item-produto__img__action item-produto__img__action-delete"></i>
+          <i class="item-produto__img__action item-produto__img__action-edit"></i>
+        </div>
+        <h4 class="item-produto__nome">{{ p.nome }}</h4>
+        <p class="item-produto__preco">{{ p.preco | currency }}</p>
         <a href="">Ver produto</a>
       </li>
     </ul>
