@@ -16,6 +16,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProdutoHomeComponent } from './produto/produto-home/produto-home.component';
+import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ProdutoHomeComponent } from './produto/produto-home/produto-home.compon
     LinhaProdutosComponent,
     FrontComponent,
     LoginComponent,
-    ProdutoHomeComponent
+    ProdutoHomeComponent,
+    ProdutoEditComponent
   ],
   imports: [
     BrowserModule,

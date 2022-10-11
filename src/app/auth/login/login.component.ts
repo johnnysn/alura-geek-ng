@@ -28,8 +28,6 @@ export class LoginComponent implements OnInit {
       this.authService.login(this.form.value.email, this.form.value.password).subscribe((value) => {
         void this.router.navigate(['produto/home']);
       });
-    } else {
-      alert('O formulário não foi preenchido corretamente.');
     }
   }
 }

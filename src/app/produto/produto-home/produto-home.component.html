@@ -3,14 +3,14 @@
 
     <div class="linha-produtos__header">
       <h3 class="linha-produtos__header__title">Todos os produtos</h3>
-      <button class="button" type="button">Adicionar produto</button>
+      <button class="button" type="button" (click)="add()">Adicionar produto</button>
     </div>
     <ul class="linha-produtos__itens">
       <li class="item-produto" *ngFor="let p of produtos; index as j">
         <div style="position: relative">
           <img class="item-produto__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
-          <i class="item-produto__img__action item-produto__img__action-delete"></i>
-          <i class="item-produto__img__action item-produto__img__action-edit"></i>
+          <i class="item-produto__img__action item-produto__img__action-delete" (click)="delete(p.id)"></i>
+          <i class="item-produto__img__action item-produto__img__action-edit" (click)="edit(p.id)"></i>
         </div>
         <h4 class="item-produto__nome">{{ p.nome }}</h4>
         <p class="item-produto__preco">{{ p.preco | currency }}</p>
