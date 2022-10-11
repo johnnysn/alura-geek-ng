@@ -82,3 +82,9 @@
   cursor: pointer;
   width: 165px;
 }
+
+@media screen and (min-width: 1024px) {
+  .footer__input {
+    width: 330px;
+  }
+}

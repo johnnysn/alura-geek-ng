@@ -15,10 +15,16 @@
         <form class="footer-top__form">
           <h3>Fale conosco</h3>
 
-          <input type="text" name="nome" id="txtNome" placeholder="Insira o seu nome" class="form__input">
+          <div class="form__field">
+            <input type="text" name="nome" id="txtNome" placeholder="Insira o seu nome" class="form__control footer__input">
+            <label for="txtNome">Insira o seu nome</label>
+          </div>
 
-          <textarea name="mensagem" id="txtMensagem" cols="40" rows="5" placeholder="Escreva a sua mensagem"
-                    class="form__textarea"></textarea>
+          <div class="form__field">
+            <textarea name="mensagem" id="txtMensagem" cols="40" rows="5" placeholder="Escreva a sua mensagem"
+                      class="form__control form__textarea footer__input"></textarea>
+            <label for="txtMensagem">Escreva a sua mensagem</label>
+          </div>
 
           <button class="footer__button" type="submit">Enviar mensagem</button>
         </form>

@@ -3,21 +3,32 @@
     <form class="form-produto" (ngSubmit)="submit()" [formGroup]="form">
       <h3 class="form-produto__title">Cadastro de produto</h3>
 
-      <select formControlName="categoria" class="form-produto__input form__input">
-        <option value="" disabled selected>Categoria do produto</option>
-        <option *ngFor="let c of categorias" [value]="c">{{c}}</option>
-      </select>
+      <div class="form__field">
+        <input type="text" formControlName="url" id="url" placeholder="URL da imagem" class="form__control" required>
+        <label for="url">URL da imagem</label>
+      </div>
 
-      <input type="text"  class="form__input form-produto__input" placeholder="Nome do produto" formControlName="nome"
-             required
-      >
+      <div class="form__field">
+        <select formControlName="categoria" class="form__control" id="categoria">
+          <option *ngFor="let c of categorias" [value]="c">{{c}}</option>
+        </select>
+        <label for="categoria">Categoria do produto</label>
+      </div>
 
-      <input type="text"  class="form__input form-produto__input" placeholder="Preço do produto" formControlName="preco"
-             required
-      >
+      <div class="form__field">
+        <input type="text" formControlName="nome" id="nome" placeholder="Nome do produto" class="form__control" required>
+        <label for="nome">Nome do produto</label>
+      </div>
 
-      <textarea name="descricao" id="descricao" cols="30" rows="5" class="form__textarea form-produto__input"
-                placeholder="Descrição do produto"></textarea>
+      <div class="form__field">
+        <input type="text"  formControlName="preco" placeholder="Preço do produto" class="form__control" required id="preco">
+        <label for="preco">Preço do produto</label>
+      </div>
+
+      <div class="form__field">
+        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto" class="form__control form__textarea"></textarea>
+        <label for="descricao" class="floating-label">Descrição do produto</label>
+      </div>
 
       <button class="button" type="submit" [disabled]="!form.valid" >Enviar</button>
     </form>

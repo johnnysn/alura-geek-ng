@@ -13,6 +13,7 @@ export class ProdutoEditComponent implements OnInit {
   id: number | null = null;
   form = new FormGroup({
     nome: new FormControl(''),
+    url: new FormControl(''),
     preco: new FormControl(''),
     descricao: new FormControl(''),
     categoria: new FormControl('')
