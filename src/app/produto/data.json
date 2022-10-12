@@ -1,115 +1,153 @@
 {
-    "categorias": ["Star Wars", "Consoles", "Diversos"],
-    "produtos": [
-        {
-            "nome": "Produto 1",
-            "preco": 185.00,
-            "categoria": "Star Wars",
-            "id": 1
-        },
-        {
-            "nome": "Produto 2",
-            "preco": 200.00,
-            "categoria": "Star Wars",
-            "id": 2
-        },
-        {
-            "nome": "Produto 3",
-            "preco": 185.00,
-            "categoria": "Star Wars",
-            "id": 3
-        },
-        {
-            "nome": "Produto 4",
-            "preco": 185.00,
-            "categoria": "Star Wars",
-            "id": 4
-        },
-        {
-            "nome": "Produto 5",
-            "preco": 185.00,
-            "categoria": "Star Wars",
-            "id": 5
-        },
-        {
-            "nome": "Produto 6",
-            "preco": 185.00,
-            "categoria": "Star Wars",
-            "id": 6
-        },
-
-        {
-            "nome": "Controle N64",
-            "preco": 185.00,
-            "categoria": "Consoles",
-            "id": 7
-        },
-        {
-            "nome": "Polystation 7",
-            "preco": 200.00,
-            "categoria": "Consoles",
-            "id": 8
-        },
-        {
-            "nome": "Super Não Entendo",
-            "preco": 185.00,
-            "categoria": "Consoles",
-            "id": 9
-        },
-        {
-            "nome": "Não Entendo Suíte",
-            "preco": 185.00,
-            "categoria": "Consoles",
-            "id": 10
-        },
-        {
-            "nome": "X Caixa Caixa",
-            "preco": 185.00,
-            "categoria": "Consoles",
-            "id": 11
-        },
-        {
-            "nome": "Game Boi Free",
-            "preco": 185.00,
-            "categoria": "Consoles",
-            "id": 12
-        },
-
-        {
-            "nome": "Letra Estranha",
-            "preco": 185.00,
-            "categoria": "Diversos",
-            "id": 13
-        },
-        {
-            "nome": "Moleque com Manete",
-            "preco": 200.00,
-            "categoria": "Diversos",
-            "id": 14
-        },
-        {
-            "nome": "Knuckles",
-            "preco": 185.00,
-            "categoria": "Diversos",
-            "id": 15
-        },
-        {
-            "nome": "Mesa Azul",
-            "preco": 185.00,
-            "categoria": "Diversos",
-            "id": 16
-        },
-        {
-            "nome": "Camisa de Burguer",
-            "preco": 185.00,
-            "categoria": "Diversos",
-            "id": 17
-        },
-        {
-            "nome": "Digimon",
-            "preco": 185.00,
-            "categoria": "Diversos",
-            "id": 18
-        }
-    ]
+  "categorias": [
+    "Star Wars",
+    "Consoles",
+    "Diversos"
+  ],
+  "produtos": [
+    {
+      "nome": "Produto 1",
+      "preco": 185.00,
+      "categoria": "Star Wars",
+      "id": 1,
+      "url": "1.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Produto 2",
+      "preco": 200.00,
+      "categoria": "Star Wars",
+      "id": 2,
+      "url": "2.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Produto 3",
+      "preco": 185.00,
+      "categoria": "Star Wars",
+      "id": 3,
+      "url": "3.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Produto 4",
+      "preco": 185.00,
+      "categoria": "Star Wars",
+      "id": 4,
+      "url": "4.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Produto 5",
+      "preco": 185.00,
+      "categoria": "Star Wars",
+      "id": 5,
+      "url": "5.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Produto 6",
+      "preco": 185.00,
+      "categoria": "Star Wars",
+      "id": 6,
+      "url": "6.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Controle N64",
+      "preco": 185.00,
+      "categoria": "Consoles",
+      "id": 7,
+      "url": "7.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Polystation 7",
+      "preco": 200.00,
+      "categoria": "Consoles",
+      "id": 8,
+      "url": "8.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Super Não Entendo",
+      "preco": 185.00,
+      "categoria": "Consoles",
+      "id": 9,
+      "url": "9.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Não Entendo Suíte",
+      "preco": 185.00,
+      "categoria": "Consoles",
+      "id": 10,
+      "url": "10.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "X Caixa Caixa",
+      "preco": 185.00,
+      "categoria": "Consoles",
+      "id": 11,
+      "url": "11.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Game Boi Free",
+      "preco": 185.00,
+      "categoria": "Consoles",
+      "id": 12,
+      "url": "12.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Letra Estranha",
+      "preco": 185.00,
+      "categoria": "Diversos",
+      "id": 13,
+      "url": "13.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Moleque com Manete",
+      "preco": 200.00,
+      "categoria": "Diversos",
+      "id": 14,
+      "url": "14.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Knuckles",
+      "preco": 185.00,
+      "categoria": "Diversos",
+      "id": 15,
+      "url": "15.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Mesa Azul",
+      "preco": 185.00,
+      "categoria": "Diversos",
+      "id": 16,
+      "url": "16.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Camisa de Burguer",
+      "preco": 185.00,
+      "categoria": "Diversos",
+      "id": 17,
+      "url": "17.jpg",
+      "descricao": ""
+    },
+    {
+      "nome": "Digimon",
+      "preco": 185.00,
+      "categoria": "Diversos",
+      "id": 18,
+      "url": "18.jpg",
+      "descricao": ""
+    }
+  ]
 }

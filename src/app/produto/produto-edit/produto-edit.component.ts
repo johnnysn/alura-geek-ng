@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from "@angular/router";
+import {ActivatedRoute, Router} from "@angular/router";
 import {ProdutoService} from "../produto.service";
 import {FormControl, FormGroup} from "@angular/forms";
 
@@ -20,26 +20,28 @@ export class ProdutoEditComponent implements OnInit {
   });
   categorias: string[] = [];
 
-  constructor(private route: ActivatedRoute, private produtoService: ProdutoService) { }
+  constructor(private route: ActivatedRoute, private router: Router, private produtoService: ProdutoService) { }
 
   ngOnInit(): void {
     this.produtoService.getCategorias().subscribe(c => this.categorias = c);
     this.route.params.subscribe(params => {
+      this.form.reset();
       if (params['id']) {
         this.id = params['id'];
         this.produtoService.getById(params['id']).subscribe(p => {
-          if (p) this.form.setValue(p);
+          if (p) this.form.patchValue(p);
         });
       } else {
         this.id = null;
-        this.form.reset();
       }
     });
   }
 
   submit() {
     if (this.form.valid) {
-
+      this.produtoService.save(this.id, this.form.value).subscribe(p => {
+        void this.router.navigate(['produto/home']);
+      });
     }
   }
 }

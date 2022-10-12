@@ -6,7 +6,7 @@
     </div>
     <ul class="linha-produtos__itens">
       <li class="item-produto" *ngFor="let p of produtos[c]; index as j">
-        <img class="item-produto__img" [src]="'assets/img/'+ p.id +'.jpg'" [alt]="p.nome">
+        <img class="item-produto__img" [src]="'assets/img/'+ p.url" [alt]="p.nome">
         <h4 class="item-produto__nome">{{ p.nome }}</h4>
         <p class="item-produto__preco">{{ p.preco | currency }}</p>
         <a href="">Ver produto</a>

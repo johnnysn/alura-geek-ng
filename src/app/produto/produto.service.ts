@@ -9,7 +9,7 @@ import {Produto} from './produto';
 })
 export class ProdutoService {
 
-  data = produtosData;
+  data: {categorias: string[], produtos: Produto[]} = produtosData;
 
   constructor() {
   }
@@ -38,6 +38,24 @@ export class ProdutoService {
       }
     }
 
+    return of(null);
+  }
+
+  save(id: number | null, value: Produto): Observable<Produto | null> {
+    if (id == null) {
+      value.id = Math.max(...this.data.produtos.map(p => p.id)) + 1;
+      this.data.produtos.push(value);
+      return of(value);
+    } else {
+      value.id = id;
+      for (let i = 0; i < this.data.produtos.length; i++) {
+        const prod = this.data.produtos[i];
+        if (prod.id == id) {
+          this.data.produtos[i] = value;
+          return of(value);
+        }
+      }
+    }
     return of(null);
   }
 }

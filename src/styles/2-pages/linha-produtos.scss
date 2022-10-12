@@ -45,7 +45,7 @@
 .linha-produtos__itens {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   gap: 16px;
 }

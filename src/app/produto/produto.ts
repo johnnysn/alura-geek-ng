@@ -3,5 +3,6 @@ export interface Produto {
     preco: number;
     categoria: string;
     descricao?: string;
+    url: string;
     id: number;
 }
