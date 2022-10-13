@@ -1,5 +1,6 @@
 import { NgModule, DEFAULT_CURRENCY_CODE, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxMaskModule, IConfig } from 'ngx-mask';
 
 // Definir locale PT-BR
 import ptBr from '@angular/common/locales/pt';
@@ -18,6 +19,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProdutoHomeComponent } from './produto/produto-home/produto-home.component';
 import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.component';
 
+const maskConfig: Partial<IConfig> = {
+  validation: false,
+};
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +38,8 @@ import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgxMaskModule.forRoot(maskConfig)
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

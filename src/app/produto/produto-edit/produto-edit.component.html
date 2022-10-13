@@ -21,13 +21,15 @@
       </div>
 
       <div class="form__field">
-        <input type="text"  formControlName="preco" placeholder="Preço do produto" class="form__control" required id="preco">
+        <input type="text"  formControlName="preco" placeholder="Preço do produto" class="form__control"
+               required id="preco" prefix="R$ " mask="separator.2" thousandSeparator=".">
         <label for="preco">Preço do produto</label>
       </div>
 
       <div class="form__field">
-        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto" class="form__control form__textarea"></textarea>
-        <label for="descricao" class="floating-label">Descrição do produto</label>
+        <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto"
+                  class="form__control form__textarea"></textarea>
+        <label for="descricao">Descrição do produto</label>
       </div>
 
       <button class="button" type="submit" [disabled]="!form.valid" >Enviar</button>
