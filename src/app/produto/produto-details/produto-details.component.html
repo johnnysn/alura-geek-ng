@@ -1,0 +1,20 @@
+<section class="produto-details">
+  <div class="produto-details__main">
+    <img [src]="'assets/img/' + produto?.url" [alt]="produto?.nome" class="produto-details__main___img">
+
+    <div class="produto-details__main___text">
+      <h3 class="produto-details__main___text____title">{{ produto?.nome }}</h3>
+
+      <p class="produto-details__main___text____preco">{{ produto?.preco | currency:'BRL' }}</p>
+
+      <p>{{ produto?.descricao }}</p>
+    </div>
+  </div>
+
+  <div class="produto-details__other">
+    <div class="linha-produtos__header">
+      <h3 class="linha-produtos__header__title">Produtos similares</h3>
+    </div>
+    <app-produto-short [produtos]="outros" ></app-produto-short>
+  </div>
+</section>

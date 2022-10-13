@@ -9,15 +9,17 @@ registerLocaleData(ptBr);
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { BannerComponent } from './banner/banner.component';
+import { BannerComponent } from './front/banner/banner.component';
 import { FooterComponent } from './footer/footer.component';
-import { LinhaProdutosComponent } from './linha-produtos/linha-produtos.component';
+import { LinhaProdutosComponent } from './front/linha-produtos/linha-produtos.component';
 import { FrontComponent } from './front/front.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProdutoHomeComponent } from './produto/produto-home/produto-home.component';
 import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.component';
+import { ProdutoShortComponent } from './produto/produto-short/produto-short.component';
+import { ProdutoDetailsComponent } from './produto/produto-details/produto-details.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -33,7 +35,9 @@ const maskConfig: Partial<IConfig> = {
     FrontComponent,
     LoginComponent,
     ProdutoHomeComponent,
-    ProdutoEditComponent
+    ProdutoEditComponent,
+    ProdutoShortComponent,
+    ProdutoDetailsComponent
   ],
   imports: [
     BrowserModule,
