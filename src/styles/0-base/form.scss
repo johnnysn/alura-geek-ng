@@ -13,9 +13,9 @@
   font-size: 14px;
   top: 21px;
   color: #A2A2A2;
-  transition: all .3s ease-out;
-  -webkit-transition: all .3s ease-out;
-  -moz-transition: all .3s ease-out;
+  transition: all .2s ease-out;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
 }
 
 .form__control:focus + label,
@@ -44,49 +44,6 @@
   resize: none;
   height: 152px;
 }
-/*
-input:focus ~ .floating-label,
-input:not(:focus):valid ~ .floating-label,
-textarea:focus ~ .floating-label
-{
-  top: 8px;
-  bottom: 10px;
-  font-size: 12px;
-  transform: none;
-  opacity: 1;
-}
-
-.floating-label {
-  position: absolute;
-  pointer-events: none;
-  left: 0.8rem;
-  font-size: 14px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.2s ease all;
-  color: #A2A2A2;
-}
-
-.form__field {
-  position: relative;
-}
-
-.form__input {
-  padding: 4px 12px;
-  border: unset;
-  border-bottom: 1px solid #E5E5E5;
-  border-radius: 4px;
-  height: 56px;
-  font-family: inherit;
-}
-
-.form__input.ng-invalid.ng-touched {
-  border: red 1px solid;
-}
-
-
-
-*/
 
 @media screen and (min-width: 0) {
   .form__control  {
