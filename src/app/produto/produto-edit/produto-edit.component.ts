@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ProdutoService} from "../produto.service";
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 
 @Component({
   selector: 'app-produto-edit',
@@ -11,12 +11,12 @@ import {FormControl, FormGroup} from "@angular/forms";
 export class ProdutoEditComponent implements OnInit {
 
   id: number | null = null;
-  form = new FormGroup({
-    nome: new FormControl(''),
-    url: new FormControl(''),
-    preco: new FormControl(''),
-    descricao: new FormControl(''),
-    categoria: new FormControl('')
+  form = new UntypedFormGroup({
+    nome: new UntypedFormControl(''),
+    url: new UntypedFormControl(''),
+    preco: new UntypedFormControl(''),
+    descricao: new UntypedFormControl(''),
+    categoria: new UntypedFormControl('')
   });
   categorias: string[] = [];
 

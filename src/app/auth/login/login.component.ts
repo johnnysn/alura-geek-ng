@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {AuthService} from "../auth.service";
 import {Router} from "@angular/router";
 
@@ -10,10 +10,10 @@ import {Router} from "@angular/router";
 })
 export class LoginComponent implements OnInit {
 
-  email = new FormControl('');
-  password = new FormControl('');
+  email = new UntypedFormControl('');
+  password = new UntypedFormControl('');
 
-  form = new FormGroup({
+  form = new UntypedFormGroup({
     email: this.email,
     password: this.password
   });

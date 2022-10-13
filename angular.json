@@ -104,5 +104,7 @@
       }
     }
   },
-  "defaultProject": "alura-geek-ng"
+  "cli": {
+    "analytics": false
+  }
 }
