@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup} from "@angular/forms";
+import {SnackbarService} from "../shared/snackbar/snackbar.service";
 
 @Component({
   selector: 'app-footer',
@@ -7,10 +9,23 @@ import {Component, OnInit} from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() {
+  form = new FormGroup({
+    nome: new FormControl(''),
+    mensagem: new FormControl('')
+  });
+
+  constructor(private snackbar: SnackbarService) {
   }
 
   ngOnInit(): void {
   }
 
+  submit() {
+    if (this.form.valid) {
+      this.snackbar.show('Agradecemos a sua mensagem!');
+      this.form.reset();
+    } else {
+      this.snackbar.error('Favor, preencher os campos corretamente.');
+    }
+  }
 }

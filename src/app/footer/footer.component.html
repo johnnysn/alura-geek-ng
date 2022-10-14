@@ -13,18 +13,23 @@
           <li><a href="">Anuncie aqui</a></li>
         </ul>
 
-        <form class="footer-top__form">
+        <form class="footer-top__form" [formGroup]="form" (ngSubmit)="submit()">
           <h3>Fale conosco</h3>
 
           <div class="form__field">
-            <input type="text" name="nome" id="txtNome" placeholder="Insira o seu nome" class="form__control footer__input">
+            <input type="text" formControlName="nome" id="txtNome" placeholder="Insira o seu nome" class="form__control footer__input"
+              required maxlength="40">
             <label for="txtNome">Insira o seu nome</label>
+            <span class="form__field___hint">Até 40 caracteres</span>
           </div>
 
           <div class="form__field">
-            <textarea name="mensagem" id="txtMensagem" cols="40" rows="5" placeholder="Escreva a sua mensagem"
-                      class="form__control form__textarea footer__input footer__textarea"></textarea>
+            <textarea formControlName="mensagem" id="txtMensagem" cols="40" rows="5" placeholder="Escreva a sua mensagem"
+                      class="form__control form__textarea footer__input footer__textarea"
+                      required maxlength="120"
+            ></textarea>
             <label for="txtMensagem">Escreva a sua mensagem</label>
+            <span class="form__field___hint">Até 120 caracteres</span>
           </div>
 
           <button class="footer__button" type="submit">Enviar mensagem</button>

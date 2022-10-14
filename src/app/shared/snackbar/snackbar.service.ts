@@ -17,4 +17,8 @@ export class SnackbarService {
       type
     });
   }
+
+  error(message: string) {
+    this.show(message, 'danger');
+  }
 }
