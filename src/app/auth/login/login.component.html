@@ -5,15 +5,15 @@
     <h3 class="login__form__title">Iniciar Sessão</h3>
 
     <div class="form__field">
-      <input type="text"  class="form__control login__form__input" placeholder="Escreva seu email"
-             formControlName="email" id="email" required email
+      <input type="email"  class="form__control login__form__input" placeholder="Escreva seu email"
+             formControlName="email" id="email" required email pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
       >
       <label for="email">Escreva seu email</label>
     </div>
 
     <div class="form__field">
       <input type="password" class="form__control login__form__input" placeholder="Escreva sua senha"
-             formControlName="password" id="password" required minlength="6"
+             formControlName="password" id="password" required
       >
       <label for="password">Escreva sua senha</label>
     </div>

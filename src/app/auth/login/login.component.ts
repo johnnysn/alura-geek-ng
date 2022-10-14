@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {AuthService} from "../auth.service";
 import {Router} from "@angular/router";
+import {SnackbarService} from "../../shared/snackbar/snackbar.service";
 
 @Component({
   selector: 'app-login',
@@ -18,16 +19,23 @@ export class LoginComponent implements OnInit {
     password: this.password
   });
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private snackbarService: SnackbarService) {
+  }
 
   ngOnInit(): void {
   }
 
   onSubmit() {
     if (this.form.valid) {
-      this.authService.login(this.form.value.email, this.form.value.password).subscribe((value) => {
-        void this.router.navigate(['produto/home']);
-      });
+      this.authService.login(this.form.value.email, this.form.value.password).subscribe(
+        (value) => {
+          this.snackbarService.show('Login efetuado com sucesso!');
+          void this.router.navigate(['produto/home']);
+        },
+        error => {
+          this.snackbarService.show(error, 'danger');
+        }
+      );
     }
   }
 }

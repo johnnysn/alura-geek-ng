@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {Observable, of} from "rxjs";
+import {Observable, of, throwError} from "rxjs";
 import {User} from "./user";
 
 @Injectable({
@@ -9,10 +9,13 @@ export class AuthService {
 
   private user: User | null = null;
 
-  login(email: string, password: string): Observable<any> {
+  login(email: string, password: string): Observable<User> {
     this.user = {email: email, token: "dummy_token"};
 
-    return of({});
+    if (email != 'meirelles@geek.com' || password != '123456')
+      return throwError('Credenciais inválidas!');
+
+    return of(this.user);
   }
 
   logout() {

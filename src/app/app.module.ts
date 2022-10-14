@@ -20,6 +20,8 @@ import { ProdutoHomeComponent } from './produto/produto-home/produto-home.compon
 import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.component';
 import { ProdutoShortComponent } from './produto/produto-short/produto-short.component';
 import { ProdutoDetailsComponent } from './produto/produto-details/produto-details.component';
+import {SharedModule} from "./shared/shared.module";
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -40,7 +42,9 @@ const maskConfig: Partial<IConfig> = {
     ProdutoDetailsComponent
   ],
   imports: [
+    SharedModule,
     BrowserModule,
+    BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(maskConfig)
