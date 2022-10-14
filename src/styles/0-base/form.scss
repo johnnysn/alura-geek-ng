@@ -18,6 +18,12 @@
   -moz-transition: all .2s ease-out;
 }
 
+.form__field___hint {
+  color: #A2A2A2;
+  font-size: .7rem;
+  margin-left: .7rem;
+}
+
 .form__control:focus + label,
 .form__control:not(:placeholder-shown) + label{
   top: 8px;

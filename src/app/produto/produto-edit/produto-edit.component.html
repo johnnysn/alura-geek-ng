@@ -15,8 +15,10 @@
     </div>
 
     <div class="form__field">
-      <input type="text" formControlName="nome" id="nome" placeholder="Nome do produto" class="form__control" required>
+      <input type="text" formControlName="nome" id="nome" placeholder="Nome do produto" class="form__control"
+             required maxlength="20">
       <label for="nome">Nome do produto</label>
+      <span class="form__field___hint">Até 20 caracteres</span>
     </div>
 
     <div class="form__field">
@@ -27,10 +29,11 @@
 
     <div class="form__field">
       <textarea name="descricao" id="descricao" cols="30" rows="10" placeholder="Descrição do produto"
-                class="form__control form__textarea" formControlName="descricao"></textarea>
+                class="form__control form__textarea" formControlName="descricao" maxlength="150"></textarea>
       <label for="descricao">Descrição do produto</label>
+      <span class="form__field___hint">Até 150 caracteres</span>
     </div>
 
-    <button class="button" type="submit" [disabled]="!form.valid">Enviar</button>
+    <button class="button" type="submit">Enviar</button>
   </form>
 </section>

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute, Router} from "@angular/router";
 import {ProdutoService} from "../produto.service";
 import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
+import {SnackbarService} from "../../shared/snackbar/snackbar.service";
 
 @Component({
   selector: 'app-produto-edit',
@@ -20,7 +21,12 @@ export class ProdutoEditComponent implements OnInit {
   });
   categorias: string[] = [];
 
-  constructor(private route: ActivatedRoute, private router: Router, private produtoService: ProdutoService) { }
+  constructor(
+    private route: ActivatedRoute,
+    private router: Router,
+    private produtoService: ProdutoService,
+    private snackbarService: SnackbarService
+  ) { }
 
   ngOnInit(): void {
     this.produtoService.getCategorias().subscribe(c => this.categorias = c);
@@ -40,8 +46,11 @@ export class ProdutoEditComponent implements OnInit {
   submit() {
     if (this.form.valid) {
       this.produtoService.save(this.id, this.form.value).subscribe(p => {
+        this.snackbarService.show('Produto cadastrado com sucesso!');
         void this.router.navigate(['produto/home']);
       });
+    } else {
+      this.snackbarService.show('Favor, preencher o formulário corretamente.', 'danger');
     }
   }
 }
