@@ -2,9 +2,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   gap: 16px;
   padding: 16px 16px;
   color: #464646;
+}
+
+.linha-produtos__categoria {
+  width: calc(100% - 32px);
 }
 
 .linha-produtos__header {
@@ -50,14 +55,22 @@
   gap: 16px;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 640px) {
   .linha-produtos {
     padding: 16px 32px;
+  }
+
+  .linha-produtos__categoria {
+    width: calc(100% - 64px);
   }
 }
 
 @media (min-width: 1136px) {
   .linha-produtos {
     padding: 16px 0;
+  }
+
+  .linha-produtos__categoria {
+    width: 100%;
   }
 }

@@ -8,6 +8,8 @@ import {Router} from "@angular/router";
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  searchKey: string = '';
+  searchShow = false;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -21,5 +23,17 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.authService.logout();
     void this.router.navigate(['front']);
+  }
+
+  search() {
+    if (this.searchKey) {
+      void this.router.navigate(['/front'], {queryParams: {key: this.searchKey}});
+    } else {
+      void this.router.navigate(['/']);
+    }
+  }
+
+  toggleShow() {
+    this.searchShow = !this.searchShow;
   }
 }

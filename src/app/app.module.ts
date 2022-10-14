@@ -15,7 +15,7 @@ import { LinhaProdutosComponent } from './front/linha-produtos/linha-produtos.co
 import { FrontComponent } from './front/front.component';
 import { AppRoutingModule } from './app-routing.module';
 import { LoginComponent } from './auth/login/login.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { ProdutoHomeComponent } from './produto/produto-home/produto-home.component';
 import { ProdutoEditComponent } from './produto/produto-edit/produto-edit.component';
 import { ProdutoShortComponent } from './produto/produto-short/produto-short.component';
@@ -47,7 +47,8 @@ const maskConfig: Partial<IConfig> = {
     BrowserAnimationsModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot(maskConfig)
+    NgxMaskModule.forRoot(maskConfig),
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },

@@ -3,16 +3,16 @@
       <div class="header__left">
         <a routerLink="/front"><img src="assets/img/Logo.svg" alt="Alura Geek" class="header__logo"></a>
 
-        <div class="searchbar">
-          <input class="searchbar__input" type="text" id="txtSearch" placeholder="O que deseja encontrar?" />
-          <button class="searchbar__button" type="button"><i class="searchbar__button__icon"></i></button>
+        <div class="searchbar" [ngClass]="{'searchbar-show': searchShow}">
+          <input class="searchbar__input" type="text" id="txtSearch" placeholder="O que deseja encontrar?" [(ngModel)]="searchKey" />
+          <button class="searchbar__button" type="button" (click)="search()"><i class="searchbar__button__icon"></i></button>
         </div>
       </div>
 
       <button *ngIf="!isAuthenticated()" type="button" class="header__button" routerLink="/login">Login</button>
       <button *ngIf="isAuthenticated()" type="button" class="header__logout" (click)="logout()"><i class="header__logout__icon"></i> Logout</button>
 
-      <button class="header__button-search" type="button"><i class="header__button-search__icon"></i></button>
+      <button class="header__button-search" type="button" (click)="toggleShow()"><i class="header__button-search__icon"></i></button>
     </header>
 </div>
 

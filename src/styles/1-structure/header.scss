@@ -10,6 +10,7 @@
 .header__left {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -21,12 +22,18 @@
   padding-left: 1rem;
   padding-right: 1rem;
   cursor: pointer;
+  height: 54px;
+}
+
+.header__button:hover {
+  background-color: #F0F0F6
 }
 
 .header__button-search {
   border: unset;
   background: transparent;
   cursor: pointer;
+  height: 54px;
 }
 
 .header__button-search__icon {
@@ -71,15 +78,23 @@
   .header__button-search {
     display: block;
   }
+
+  .header__left {
+    width: 239px;
+  }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 640px) {
   .searchbar {
     display: flex;
   }
 
   .header__button-search {
     display: none;
+  }
+
+  .header__left {
+    width: auto;
   }
 }
 
@@ -102,4 +117,8 @@
   height: 17px;
   width: 17px;
   display: block;
+}
+
+.searchbar-show {
+  display: flex;
 }

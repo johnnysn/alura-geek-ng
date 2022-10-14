@@ -18,11 +18,14 @@ export class ProdutoService {
     return of(this.data.produtos.find(p => p.id == id) || null);
   }
 
-  getProdutos(categoria?: string): Observable<Produto[]> {
+  getProdutos(categoria?: string, key?: string): Observable<Produto[]> {
+    let result: Produto[] = this.data.produtos.slice();
     if (categoria)
-      return of(this.data.produtos.slice().filter((p: Produto) => p.categoria == categoria));
+      result = result.filter((p: Produto) => p.categoria == categoria);
+    if (key)
+      result = result.filter((p: Produto) => p.nome.toLowerCase().includes(key.trim().toLowerCase()));
 
-    return of(this.data.produtos.slice());
+    return of(result);
   }
 
   getCategorias(): Observable<string[]> {
