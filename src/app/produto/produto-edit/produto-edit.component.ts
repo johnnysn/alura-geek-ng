@@ -48,6 +48,8 @@ export class ProdutoEditComponent implements OnInit {
       this.produtoService.save(this.id, this.form.value).subscribe(p => {
         this.snackbarService.show('Produto cadastrado com sucesso!');
         void this.router.navigate(['produto/home']);
+      }, error => {
+        this.snackbarService.error(error);
       });
     } else {
       this.snackbarService.show('Favor, preencher o formulário corretamente.', 'danger');

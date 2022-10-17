@@ -28,7 +28,7 @@ export class LoginComponent implements OnInit {
   onSubmit() {
     if (this.form.valid) {
       this.authService.login(this.form.value.email, this.form.value.password).subscribe(
-        (value) => {
+        (user) => {
           this.snackbarService.show('Login efetuado com sucesso!');
           void this.router.navigate(['produto/home']);
         },

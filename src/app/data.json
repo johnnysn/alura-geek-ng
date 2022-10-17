@@ -1,4 +1,10 @@
 {
+  "users": [
+    {
+      "email": "meirelles@geek.com",
+      "password": "123456"
+    }
+  ],
   "categorias": [
     "Star Wars",
     "Consoles",

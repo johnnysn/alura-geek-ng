@@ -22,6 +22,9 @@ import { ProdutoShortComponent } from './produto/produto-short/produto-short.com
 import { ProdutoDetailsComponent } from './produto/produto-details/produto-details.component';
 import {SharedModule} from "./shared/shared.module";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
+import {fakeBackendProvider} from "./fake-backend.provider";
+import {ErrorCatchingInterceptor, JwtInterceptor} from "./interceptors";
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -48,11 +51,18 @@ const maskConfig: Partial<IConfig> = {
     AppRoutingModule,
     ReactiveFormsModule,
     NgxMaskModule.forRoot(maskConfig),
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
     { provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' },
+
+    { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
+    { provide: HTTP_INTERCEPTORS, useClass: ErrorCatchingInterceptor, multi: true },
+
+    // provider used to create fake backend
+    fakeBackendProvider
   ],
   bootstrap: [AppComponent]
 })

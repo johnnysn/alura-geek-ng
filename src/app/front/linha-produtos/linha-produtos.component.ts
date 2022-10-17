@@ -11,6 +11,7 @@ import {ActivatedRoute} from "@angular/router";
 export class LinhaProdutosComponent implements OnInit {
 
   categorias: string[] = [];
+  categoriasShown: string[] = [];
   produtos: { [categoria: string]: Produto[] } = {};
   key = '';
 
@@ -26,21 +27,15 @@ export class LinhaProdutosComponent implements OnInit {
 
   updateCategorias(categorias: string[]) {
     this.categorias = categorias;
+    this.categoriasShown = [];
     this.produtos = {};
     this.categorias.forEach(c => {
       this.produtoService.getProdutos(c, this.key).subscribe(prods => {
         this.produtos[c] = prods;
+        if (prods && prods.length > 0)
+          this.categoriasShown.push(c);
       });
     });
-    // TODO Remover categorias vazias
-    let i = 0;
-    while (i < this.categorias.length) {
-      if (this.produtos[this.categorias[i]].length == 0) {
-        this.categorias.splice(i, 1);
-      } else {
-        i++;
-      }
-    }
   }
 
 }

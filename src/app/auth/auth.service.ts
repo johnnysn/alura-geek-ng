@@ -1,6 +1,9 @@
 import {Injectable} from "@angular/core";
-import {Observable, of, throwError} from "rxjs";
+import {Observable} from "rxjs";
 import {User} from "./user";
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
+import {tap} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -9,13 +12,16 @@ export class AuthService {
 
   private user: User | null = null;
 
+  constructor(private client: HttpClient) {
+  }
+
   login(email: string, password: string): Observable<User> {
-    this.user = {email: email, token: "dummy_token"};
-
-    if (email != 'meirelles@geek.com' || password != '123456')
-      return throwError('Credenciais inválidas!');
-
-    return of(this.user);
+    return this.client.post<User>(environment.apiUrl + '/auth/login', {email: email, password: password})
+      .pipe(
+        tap(user => {
+          this.user = user;
+        })
+      );
   }
 
   logout() {
@@ -26,4 +32,7 @@ export class AuthService {
     return this.user != null;
   }
 
+  getUser() {
+    return this.user ? {email: this.user?.email, token: this.user?.token} : null;
+  }
 }

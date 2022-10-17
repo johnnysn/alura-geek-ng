@@ -1,64 +1,42 @@
 import {Injectable} from '@angular/core';
-import * as produtosData from './data.json';
 import {Observable} from 'rxjs'
-import {of} from 'rxjs'
 import {Produto} from './produto';
+import {HttpClient} from "@angular/common/http";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdutoService {
 
-  data: {categorias: string[], produtos: Produto[]} = produtosData;
-
-  constructor() {
+  constructor(private client: HttpClient) {
   }
 
   getById(id: number): Observable<Produto | null> {
-    return of(this.data.produtos.find(p => p.id == id) || null);
+    return this.client.get<Produto | null>(environment.apiUrl + '/produtos/' + id);
   }
 
   getProdutos(categoria?: string, key?: string): Observable<Produto[]> {
-    let result: Produto[] = this.data.produtos.slice();
-    if (categoria)
-      result = result.filter((p: Produto) => p.categoria == categoria);
-    if (key)
-      result = result.filter((p: Produto) => p.nome.toLowerCase().includes(key.trim().toLowerCase()));
+    const search: any = {};
+    if (categoria) search['categoria'] = categoria;
+    if (key) search['key'] = key;
 
-    return of(result);
+    return this.client.get<Produto[]>(environment.apiUrl + '/produtos', {params: search});
   }
 
   getCategorias(): Observable<string[]> {
-    return of(this.data.categorias.slice());
+    return this.client.get<string[]>(environment.apiUrl + '/categorias');
   }
 
-  delete(id: number): Observable<Produto | null> {
-    for (let i = 0; this.data.produtos.length; i++) {
-      const prod = this.data.produtos[i];
-      if (prod.id == id) {
-        this.data.produtos.splice(i,1);
-        return of(prod);
-      }
-    }
-
-    return of(null);
+  delete(id: number): Observable<any> {
+    return this.client.delete(environment.apiUrl + '/produtos/' + id);
   }
 
-  save(id: number | null, value: Produto): Observable<Produto | null> {
+  save(id: number | null, value: Produto): Observable<Produto> {
     if (id == null) {
-      value.id = Math.max(...this.data.produtos.map(p => p.id)) + 1;
-      this.data.produtos.push(value);
-      return of(value);
+      return this.client.post<Produto>(environment.apiUrl + '/produtos', value);
     } else {
-      value.id = id;
-      for (let i = 0; i < this.data.produtos.length; i++) {
-        const prod = this.data.produtos[i];
-        if (prod.id == id) {
-          this.data.produtos[i] = value;
-          return of(value);
-        }
-      }
+      return this.client.put<Produto>(environment.apiUrl + '/produtos/' + id, value);
     }
-    return of(null);
   }
 }
