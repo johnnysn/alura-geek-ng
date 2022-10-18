@@ -1,0 +1,9 @@
+<div class="upload-image">
+  <div class="upload-image__drag" appDndFile (fileDropped)="onFileDropped($event)">
+    <img [src]="imgSrc" alt="Upload de imagem" class="upload-image__drag___img">
+    {{ dragMessage }}
+    <input type="file" #fileDropRef id="fileDropRef" class="upload-image__input" (change)="fileSearchHandler($event)" />
+  </div>
+  <p class="upload-image__midtext">Ou</p>
+  <button class="upload-image__button" type="button" (click)="fileDropRef.click()" >Procure no seu computador</button>
+</div>

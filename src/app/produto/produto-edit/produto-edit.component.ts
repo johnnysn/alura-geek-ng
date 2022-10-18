@@ -14,7 +14,6 @@ export class ProdutoEditComponent implements OnInit {
   id: number | null = null;
   form = new UntypedFormGroup({
     nome: new UntypedFormControl(''),
-    url: new UntypedFormControl(''),
     preco: new UntypedFormControl(''),
     descricao: new UntypedFormControl(''),
     categoria: new UntypedFormControl('')
