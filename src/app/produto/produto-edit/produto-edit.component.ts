@@ -3,6 +3,7 @@ import {ActivatedRoute, Router} from "@angular/router";
 import {ProdutoService} from "../produto.service";
 import {UntypedFormControl, UntypedFormGroup} from "@angular/forms";
 import {SnackbarService} from "../../shared/snackbar/snackbar.service";
+import {Produto} from "../produto";
 
 @Component({
   selector: 'app-produto-edit',
@@ -19,6 +20,8 @@ export class ProdutoEditComponent implements OnInit {
     categoria: new UntypedFormControl('')
   });
   categorias: string[] = [];
+  produto: Produto | null = null;
+  imgSrc = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -35,16 +38,24 @@ export class ProdutoEditComponent implements OnInit {
         this.id = params['id'];
         this.produtoService.getById(params['id']).subscribe(p => {
           if (p) this.form.patchValue(p);
+          this.produto = p;
+          this.imgSrc = p?.imgSrc ?? '';
         });
       } else {
         this.id = null;
+        this.produto = null;
+        this.imgSrc = '';
       }
     });
   }
 
   submit() {
     if (this.form.valid) {
-      this.produtoService.save(this.id, this.form.value).subscribe(p => {
+      const data = {
+        ...this.form.value,
+        imgSrc: this.imgSrc
+      }
+      this.produtoService.save(this.id, data).subscribe(p => {
         this.snackbarService.show('Produto cadastrado com sucesso!');
         void this.router.navigate(['produto/home']);
       }, error => {
@@ -53,5 +64,9 @@ export class ProdutoEditComponent implements OnInit {
     } else {
       this.snackbarService.show('Favor, preencher o formulário corretamente.', 'danger');
     }
+  }
+
+  setImgSrc(imgSrc: any) {
+    this.imgSrc = imgSrc;
   }
 }

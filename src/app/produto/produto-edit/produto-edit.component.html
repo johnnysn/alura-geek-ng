@@ -2,7 +2,7 @@
   <form class="form-produto" (ngSubmit)="submit()" [formGroup]="form">
     <h3 class="form-produto__title">Cadastro de produto</h3>
 
-    <app-upload-image></app-upload-image>
+    <app-upload-image [initialImgSrc]="produto ? produto.imgSrc : ''" (imgSrcChanged)="setImgSrc($event)"></app-upload-image>
 
     <div class="form__field">
       <select formControlName="categoria" class="form__control" id="categoria">

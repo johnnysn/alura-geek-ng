@@ -1,7 +1,7 @@
 <ul class="linha-produtos__itens">
   <li class="item-produto" *ngFor="let p of produtos; index as j">
     <div style="position: relative">
-      <img class="item-produto__img" [src]="'assets/img/'+ p.url" [alt]="p.nome">
+      <img class="item-produto__img" [src]="p.imgSrc" [alt]="p.nome">
       <i *ngIf="editMode" class="item-produto__img__action item-produto__img__action-delete" (click)="delete(p.id)"></i>
       <i *ngIf="editMode" class="item-produto__img__action item-produto__img__action-edit" (click)="edit(p.id)"></i>
     </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
 import {SnackbarService} from "../snackbar/snackbar.service";
 
 @Component({
@@ -6,15 +6,24 @@ import {SnackbarService} from "../snackbar/snackbar.service";
   templateUrl: './upload-image.component.html',
   styleUrls: ['./upload-image.component.css']
 })
-export class UploadImageComponent implements OnInit {
+export class UploadImageComponent implements OnChanges {
 
   file: File | null = null;
   imgSrc: any = '/assets/img/image-icon.png';
   dragMessage = 'Arraste para adicionar uma imagem para o produto';
 
-  constructor(private snackbar: SnackbarService) { }
+  @Input() initialImgSrc = '';
+  @Output() imgSrcChanged = new EventEmitter<any>();
 
-  ngOnInit(): void {
+  constructor(private snackbar: SnackbarService) {
+  }
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (this.initialImgSrc) {
+      this.loadImage(this.initialImgSrc);
+    } else {
+      this.clearImage();
+    }
   }
 
   fileSearchHandler(event: any) {
@@ -34,10 +43,21 @@ export class UploadImageComponent implements OnInit {
     const reader = new FileReader();
 
     reader.onload = (e: any) => {
-      this.imgSrc = e.target.result;
-      this.dragMessage = 'Arraste para alterar a imagem do produto';
+      const imgSrc = e.target.result;
+      this.loadImage(imgSrc);
+      this.imgSrcChanged.emit(imgSrc);
     };
 
     reader.readAsDataURL(file);
+  }
+
+  private loadImage(src: any) {
+    this.imgSrc = src;
+    this.dragMessage = 'Arraste para alterar a imagem do produto';
+  }
+
+  private clearImage() {
+    this.imgSrc = '/assets/img/image-icon.png';
+    this.dragMessage = 'Arraste para adicionar uma imagem para o produto';
   }
 }

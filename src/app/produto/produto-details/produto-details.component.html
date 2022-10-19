@@ -1,7 +1,7 @@
 <section class="produto-details">
   <div class="produto-details__main">
     <img
-        [src]="produto ? 'assets/img/' + produto.url : ''"
+        [src]="produto ? produto.imgSrc : ''"
         [alt]="produto?.nome"
         class="produto-details__main___img">
 
