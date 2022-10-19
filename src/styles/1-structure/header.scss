@@ -44,13 +44,20 @@
   display: block;
 }
 
-.header__logout {
+.header__button-icon {
   border: unset;
   background: transparent;
   cursor: pointer;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+}
+
+.header__admin__icon {
+  background-size: contain;
+  background: url("/assets/img/admin.png") no-repeat;
+  height: 16px;
+  width: 16px;
 }
 
 .header__logout__icon {
@@ -73,6 +80,16 @@
 @media screen and (min-width: 0) {
   .searchbar {
     display: none;
+    width: 165px;
+  }
+
+  .searchbar__input {
+    border: none;
+    display: flex;
+    background: transparent;
+    font-size: 0.8rem;
+    outline: none;
+    width: 140px;
   }
 
   .header__button-search {
@@ -82,11 +99,24 @@
   .header__left {
     width: 239px;
   }
+
+  .header__right {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-around;
+    align-items: center;
+  }
 }
 
 @media screen and (min-width: 640px) {
   .searchbar {
     display: flex;
+    width: 185px;
+  }
+
+  .searchbar__input {
+    width: 160px;
   }
 
   .header__button-search {
@@ -96,13 +126,10 @@
   .header__left {
     width: auto;
   }
-}
 
-.searchbar__input {
-  border: none;
-  display: flex;
-  background: transparent;
-  outline: none;
+  .header__right {
+    flex-direction: row;
+  }
 }
 
 .searchbar__button {
@@ -114,8 +141,8 @@
 .searchbar__button__icon {
   background-size: contain;
   background: url("/assets/img/search.svg") no-repeat;
-  height: 17px;
-  width: 17px;
+  height: 16px;
+  width: 16px;
   display: block;
 }
 

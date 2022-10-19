@@ -49,3 +49,18 @@
 .upload-image__button:hover {
   background-color: #F0F0F6
 }
+
+@media screen and (min-width: 0) {
+  .upload-image {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .upload-image {
+    flex-direction: row;
+    gap: 0.5rem;
+    justify-content: space-between;
+  }
+}

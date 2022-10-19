@@ -10,7 +10,11 @@
       </div>
 
       <button *ngIf="!isAuthenticated()" type="button" class="header__button" routerLink="/login">Login</button>
-      <button *ngIf="isAuthenticated()" type="button" class="header__logout" (click)="logout()"><i class="header__logout__icon"></i> Logout</button>
+
+      <div class="header__right" *ngIf="isAuthenticated()">
+        <button type="button" class="header__button-icon" routerLink="/produto/home"><i class="header__admin__icon"></i> Admin</button>
+        <button type="button" class="header__button-icon" (click)="logout()"><i class="header__logout__icon"></i> Logout</button>
+      </div>
 
       <button class="header__button-search" type="button" (click)="toggleShow()"><i class="header__button-search__icon"></i></button>
     </header>
