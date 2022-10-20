@@ -1,27 +1,23 @@
-# AluraGeekNg
+# Alura Geek
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.14.
+Projeto gerado com o Angular Client versão 14.2.6. Tem por objetivo cumprir os requisitos especificados no 
+[challenge front-end](https://www.alura.com.br/challenges/front-end) #5 da Alura.
 
-## Development server
+O aplicativo emula uma loja virtual com ambientes público (pesquisa e visualização de produtos) e administrativo 
+(cadastro de produtos).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Todos os dados da aplicação são armazenados no local storage do navegador. Existe um único usuário administrativo 
+cadastrado, cujas credenciais são:
 
-## Code scaffolding
+* usuário: ``meirelles@geek.com``
+* senha: ``123456``
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Instalação e execução
 
-## Build
+Para instalar os pacotes, execute:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+`npm install`
 
-## Running unit tests
+Para rodar o projeto localmente, execute:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`npm start`
