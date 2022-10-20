@@ -6,10 +6,12 @@ import {ProdutoHomeComponent} from "./produto/produto-home/produto-home.componen
 import {AuthGuard} from "./auth/auth.guard";
 import {ProdutoEditComponent} from "./produto/produto-edit/produto-edit.component";
 import {ProdutoDetailsComponent} from "./produto/produto-details/produto-details.component";
+import {ProdutoVerTudoComponent} from "./produto/produto-ver-tudo/produto-ver-tudo.component";
 
 const routes: Routes = [
   { path: 'front', component: FrontComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'produto/ver-tudo/:categoria', component: ProdutoVerTudoComponent},
   { path: 'produto/home', component: ProdutoHomeComponent, canActivate: [AuthGuard]},
   { path: 'produto/edit', component: ProdutoEditComponent, canActivate: [AuthGuard]},
   { path: 'produto/edit/:id', component: ProdutoEditComponent, canActivate: [AuthGuard]},

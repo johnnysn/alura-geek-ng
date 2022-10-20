@@ -37,6 +37,7 @@ export class UploadImageComponent implements OnChanges {
   acceptFile(file: File) {
     if (file.type != 'image/jpeg' && file.type != 'image/png') {
       this.snackbar.error('Somente arquivos jpeg e png são suportados.');
+      return;
     }
     this.file = file;
 

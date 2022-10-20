@@ -31,7 +31,7 @@ export class LinhaProdutosComponent implements OnInit {
     this.produtos = {};
     this.categorias.forEach(c => {
       this.produtoService.getProdutos(c, this.key).subscribe(prods => {
-        this.produtos[c] = prods;
+        this.produtos[c] = prods.slice(0,6);
         if (prods && prods.length > 0)
           this.categoriasShown.push(c);
       });

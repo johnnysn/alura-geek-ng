@@ -2,7 +2,7 @@
   <div *ngFor="let c of categoriasShown; index as i" class="linha-produtos__categoria">
     <div class="linha-produtos__header">
       <h3 class="linha-produtos__header__title">{{ c }}</h3>
-      <a href=""><span>Ver tudo</span><i class="linha-produtos__header__arrow"></i></a>
+      <a [routerLink]="'/produto/ver-tudo/' + c"><span>Ver tudo</span><i class="linha-produtos__header__arrow"></i></a>
     </div>
     <app-produto-short [produtos]="produtos[c]" ></app-produto-short>
   </div>

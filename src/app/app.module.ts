@@ -25,6 +25,7 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {fakeBackendProvider} from "./fake-backend.provider";
 import {ErrorCatchingInterceptor, JwtInterceptor} from "./interceptors";
+import { ProdutoVerTudoComponent } from './produto/produto-ver-tudo/produto-ver-tudo.component';
 
 const maskConfig: Partial<IConfig> = {
   validation: false,
@@ -42,7 +43,8 @@ const maskConfig: Partial<IConfig> = {
     ProdutoHomeComponent,
     ProdutoEditComponent,
     ProdutoShortComponent,
-    ProdutoDetailsComponent
+    ProdutoDetailsComponent,
+    ProdutoVerTudoComponent
   ],
   imports: [
     SharedModule,
