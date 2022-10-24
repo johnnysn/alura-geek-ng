@@ -16,7 +16,7 @@
       "preco": 185.00,
       "categoria": "Star Wars",
       "id": 1,
-      "imgSrc": "/assets/img/1.jpg",
+      "imgSrc": "assets/img/1.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -24,7 +24,7 @@
       "preco": 200.00,
       "categoria": "Star Wars",
       "id": 2,
-      "imgSrc": "/assets/img/2.jpg",
+      "imgSrc": "assets/img/2.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -32,7 +32,7 @@
       "preco": 185.00,
       "categoria": "Star Wars",
       "id": 3,
-      "imgSrc": "/assets/img/3.jpg",
+      "imgSrc": "assets/img/3.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -40,7 +40,7 @@
       "preco": 185.00,
       "categoria": "Star Wars",
       "id": 4,
-      "imgSrc": "/assets/img/4.jpg",
+      "imgSrc": "assets/img/4.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -48,7 +48,7 @@
       "preco": 185.00,
       "categoria": "Star Wars",
       "id": 5,
-      "imgSrc": "/assets/img/5.jpg",
+      "imgSrc": "assets/img/5.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -56,7 +56,7 @@
       "preco": 185.00,
       "categoria": "Star Wars",
       "id": 6,
-      "imgSrc": "/assets/img/6.jpg",
+      "imgSrc": "assets/img/6.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -64,7 +64,7 @@
       "preco": 185.00,
       "categoria": "Consoles",
       "id": 7,
-      "imgSrc": "/assets/img/7.jpg",
+      "imgSrc": "assets/img/7.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -72,7 +72,7 @@
       "preco": 200.00,
       "categoria": "Consoles",
       "id": 8,
-      "imgSrc": "/assets/img/8.jpg",
+      "imgSrc": "assets/img/8.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -80,7 +80,7 @@
       "preco": 185.00,
       "categoria": "Consoles",
       "id": 9,
-      "imgSrc": "/assets/img/9.jpg",
+      "imgSrc": "assets/img/9.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -88,7 +88,7 @@
       "preco": 185.00,
       "categoria": "Consoles",
       "id": 10,
-      "imgSrc": "/assets/img/10.jpg",
+      "imgSrc": "assets/img/10.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -96,7 +96,7 @@
       "preco": 185.00,
       "categoria": "Consoles",
       "id": 11,
-      "imgSrc": "/assets/img/11.jpg",
+      "imgSrc": "assets/img/11.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -104,7 +104,7 @@
       "preco": 185.00,
       "categoria": "Consoles",
       "id": 12,
-      "imgSrc": "/assets/img/12.jpg",
+      "imgSrc": "assets/img/12.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -112,7 +112,7 @@
       "preco": 185.00,
       "categoria": "Diversos",
       "id": 13,
-      "imgSrc": "/assets/img/13.jpg",
+      "imgSrc": "assets/img/13.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -120,7 +120,7 @@
       "preco": 200.00,
       "categoria": "Diversos",
       "id": 14,
-      "imgSrc": "/assets/img/14.jpg",
+      "imgSrc": "assets/img/14.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -128,7 +128,7 @@
       "preco": 185.00,
       "categoria": "Diversos",
       "id": 15,
-      "imgSrc": "/assets/img/15.jpg",
+      "imgSrc": "assets/img/15.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -136,7 +136,7 @@
       "preco": 185.00,
       "categoria": "Diversos",
       "id": 16,
-      "imgSrc": "/assets/img/16.jpg",
+      "imgSrc": "assets/img/16.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -144,7 +144,7 @@
       "preco": 185.00,
       "categoria": "Diversos",
       "id": 17,
-      "imgSrc": "/assets/img/17.jpg",
+      "imgSrc": "assets/img/17.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     },
     {
@@ -152,7 +152,7 @@
       "preco": 185.00,
       "categoria": "Diversos",
       "id": 18,
-      "imgSrc": "/assets/img/18.jpg",
+      "imgSrc": "assets/img/18.jpg",
       "descricao": "Lorem ipsum dolor sit amet. Dolore eaque maiores nihil officia quibusdam rerum tempore tenetur veritatis voluptas voluptatem?"
     }
   ]

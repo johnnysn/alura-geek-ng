@@ -9,7 +9,7 @@ import {SnackbarService} from "../snackbar/snackbar.service";
 export class UploadImageComponent implements OnChanges {
 
   file: File | null = null;
-  imgSrc: any = '/assets/img/image-icon.png';
+  imgSrc: any = 'assets/img/image-icon.png';
   dragMessage = 'Arraste para adicionar uma imagem para o produto';
 
   @Input() initialImgSrc = '';
@@ -58,7 +58,7 @@ export class UploadImageComponent implements OnChanges {
   }
 
   private clearImage() {
-    this.imgSrc = '/assets/img/image-icon.png';
+    this.imgSrc = 'assets/img/image-icon.png';
     this.dragMessage = 'Arraste para adicionar uma imagem para o produto';
   }
 }
