@@ -21,3 +21,7 @@ Para instalar os pacotes, execute:
 Para rodar o projeto localmente, execute:
 
 `npm start`
+
+## Visualizar aplicação
+
+Acesse a build mais atual da aplicação no GitHub Pages: https://johnnysn.github.io/alura-geek-ng
